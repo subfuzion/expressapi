@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+var app = require('../app'),
+    debug = require('debug')('app');
+
+app.set('port', process.env.PORT || 3000);
+
+var server = app.listen(app.get('port'), function() {
+  // the callback is added as a listener for the server's 'listen' event
+  // see: http://nodejs.org/api/net.html#net_server_listen_path_callback
+
+  // server is an http.Server, which extends a net.Server
+  // http://nodejs.org/api/http.html#http_class_http_server
+  // http://nodejs.org/api/net.html#net_class_net_server
+  // http://nodejs.org/api/net.html#net_server_address
+  debug('server started on port %s', server.address().port);
+
+  // provide access to server via exported app for querying and adding listeners
+  app.set('server', server);
+});
+

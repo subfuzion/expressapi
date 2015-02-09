@@ -1,0 +1,26 @@
+{
+  "name": "expressapp",
+  "version": "1.0.0",
+  "description": "Starter Express API service app",
+  "keywords": [ "express", "api", "service" ],
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/server",
+    "debug": "DEBUG=app node ./bin/server",
+    "test": "mocha"
+  },
+  "author": "Tony Pujals (http://twitter.com/subfuzion)",
+  "license": "ISC",
+  "homepage": "https://github.com/tonypujals/expressapp",
+  "repository": "https://github.com/tonypujals/expressapp.git",
+  "bugs": "https://github.com/tonypujals/expressapp/issues",
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  },
+  "dependencies": {
+    "debug": "^2.1.1",
+    "express": "^4.11.2",
+    "morgan": "^1.5.1"
+  }
+}
