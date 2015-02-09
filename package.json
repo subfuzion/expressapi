@@ -11,7 +11,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./bin/server",
-    "debug": "DEBUG=app node ./bin/server",
+    "debug": "DEBUG=* node ./bin/server",
     "nodemon": "DEBUG=app nodemon ./bin/server",
     "test": "mocha --reporter spec --recursive"
   },
